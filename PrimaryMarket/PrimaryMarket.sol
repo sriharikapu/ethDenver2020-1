@@ -1,10 +1,12 @@
 pragma solidity ^0.5.16;
 
 
-// #Primitive market game for election primaries
+// Primitive market game for election primaries
 contract PrimaryMarket {
     
     event EventProcessed(string candidate, string eventName, uint pointsPerCredit);
+    event Buy(address user, string candidate, uint amount);
+    event Sell(address user, string candidate, uint amount);
     
     string constant CREDITS = "credits";
     
@@ -34,11 +36,13 @@ contract PrimaryMarket {
     function buy(string memory candidate, uint amount) public {
         _balances[CREDITS][msg.sender] += amount;
         _balances[candidate][msg.sender] -= amount;
+        emit Buy(msg.sender, candidate, amount);
     }
     
     function sell(string memory candidate, uint amount) public {
         _balances[CREDITS][msg.sender] -= amount;
         _balances[candidate][msg.sender] += amount;
+        emit Sell(msg.sender, candidate, amount);
     }
     
     function processEvent(string memory candidate, string memory eventName, uint pointsPerCredit) public {
