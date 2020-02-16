@@ -18,4 +18,4 @@ The dApp was crated using DappHero: https://admin.dapphero.io/publicprojectpage/
 
 The front end is availalbe on Glitch at https://glitch.com/~vishakh-ethdenver2020 or https://vishakh-ethdenver2020.glitch.me. 
 
-For a demo, see https://github.com/vishakh/ethDenver2020/new/master/PrimaryMarket. 
+For a demo, see https://youtu.be/enjGtCwb5aU.  
