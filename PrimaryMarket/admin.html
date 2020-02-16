@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>
+      Primary Market Admin
+    </title>
+  </head>
+  <h1>Primary Market Admin</h1>
+  <body>
+    <button data-dh-feature="network" data-dh-property-enable>
+      Connect to blockchain
+    </button>
+    <br />
+
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="addUser"
+      data-dh-property-method-id="000"
+    />
+    User adddress:
+    <input
+      data-dh-property-method-id="000"
+      data-dh-property-input-name="user"
+    />
+    Number of credits:
+    <input
+      data-dh-property-method-id="000"
+      data-dh-property-input-name="amount"
+    />
+    <button data-dh-property-method-id="000" data-dh-property-invoke="true">
+      Add user
+    </button>
+    <br />
+
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="addCandidate"
+      data-dh-property-method-id="001"
+    />
+    Candidate name:
+    <input
+      data-dh-property-method-id="001"
+      data-dh-property-input-name="candidate"
+    />
+    Number of shares:
+    <input
+      data-dh-property-method-id="001"
+      data-dh-property-input-name="amount"
+    />
+    <button data-dh-property-method-id="001" data-dh-property-invoke="true">
+      Add Candidate
+    </button>
+    <br />
+
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="processEvent"
+      data-dh-property-method-id="002"
+    />
+    Candidate name:
+    <input
+      data-dh-property-method-id="002"
+      data-dh-property-input-name="candidate"
+    />
+    Event name:
+    <input
+      data-dh-property-method-id="002"
+      data-dh-property-input-name="eventName"
+    />
+    Points per share:
+    <input
+      data-dh-property-method-id="002"
+      data-dh-property-input-name="pointsPerCredit"
+    />
+    <button data-dh-property-method-id="002" data-dh-property-invoke="true">
+      Process Event
+    </button>
+    <br />
+
+    <script
+      src="https://package.dapphero.io/main.js"
+      id="dh-apiKey"
+      data-api="1581818095100x340910386771132400"
+    ></script>
+  </body>
+</html>

@@ -34,14 +34,14 @@ contract PrimaryMarket {
     }
     
     function buy(string memory candidate, uint amount) public {
-        _balances[CREDITS][msg.sender] += amount;
-        _balances[candidate][msg.sender] -= amount;
+        _balances[CREDITS][msg.sender] -= amount;
+        _balances[candidate][msg.sender] += amount;
         emit Buy(msg.sender, candidate, amount);
     }
     
     function sell(string memory candidate, uint amount) public {
-        _balances[CREDITS][msg.sender] -= amount;
-        _balances[candidate][msg.sender] += amount;
+        _balances[CREDITS][msg.sender] += amount;
+        _balances[candidate][msg.sender] -= amount;
         emit Sell(msg.sender, candidate, amount);
     }
     

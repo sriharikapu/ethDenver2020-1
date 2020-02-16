@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>
+      Primary Market User
+    </title>
+  </head>
+  <h1>Primary Market User</h1>
+  <body>
+    <button data-dh-feature="network" data-dh-property-enable>
+      Connect to blockchain
+    </button>
+    <br />
+    
+    Your address:
+    <div
+       data-dh-feature="user" 
+       data-dh-property-address="true"
+       data-dh-property-auto-invoke="true">
+       *User Address*
+    </div>
+    
+    <h2>
+      Points
+    </h2>
+
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="getPoints"
+      data-dh-property-method-id="000"
+    />
+    <div 
+    data-dh-property-method-id="000" 
+    data-dh-property-outputs="true">
+    </div>
+    <input
+      data-dh-property-method-id="000"
+      data-dh-property-input-name="user"
+    />
+    <button data-dh-property-method-id="000" data-dh-property-invoke="true">
+      Get Points
+    </button>
+    <br />
+    
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="getLeader"
+      data-dh-property-method-id="010"
+    />
+    <div 
+    data-dh-property-method-id="010" 
+    data-dh-property-outputs="true">
+    </div>
+    <button data-dh-property-method-id="010" data-dh-property-invoke="true">
+      Get Leader
+    </button>
+    <br />
+    
+    <h2>
+      Buy / Sell
+    </h2>
+    
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="buy"
+      data-dh-property-method-id="001"
+    />
+    Candidate name:
+    <input
+      data-dh-property-method-id="001"
+      data-dh-property-input-name="candidate"
+    />
+    Number of shares:
+    <input
+      data-dh-property-method-id="001"
+      data-dh-property-input-name="amount"
+    />
+    <button data-dh-property-method-id="001" data-dh-property-invoke="true">
+      Buy Candidate
+    </button>
+    <br />
+    
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="sell"
+      data-dh-property-method-id="002"
+    />
+    Candidate name:
+    <input
+      data-dh-property-method-id="002"
+      data-dh-property-input-name="candidate"
+    />
+    Number of shares:
+    <input
+      data-dh-property-method-id="002"
+      data-dh-property-input-name="amount"
+    />
+    <button data-dh-property-method-id="002" data-dh-property-invoke="true">
+      Sell Candidate
+    </button>
+    <br />
+    
+    <h2>
+      Balances
+    </h2>
+    
+    <div
+      data-dh-feature="customContract"
+      data-dh-property-contract-name="primarymarket"
+      data-dh-property-method-name="getBalance"
+      data-dh-property-method-id="003"
+    />
+    <div 
+    data-dh-property-method-id="003" 
+    data-dh-property-outputs="true">
+    </div>
+    User: 
+    <input
+      data-dh-property-method-id="003"
+      data-dh-property-input-name="user"
+    />
+    Candidate: 
+    <input
+      data-dh-property-method-id="003"
+      data-dh-property-input-name="candidate"
+    />
+    <button data-dh-property-method-id="003" data-dh-property-invoke="true">
+      Get Points
+    </button>
+    <br />
+
+    <script
+      src="https://package.dapphero.io/main.js"
+      id="dh-apiKey"
+      data-api="1581818095100x340910386771132400"
+    ></script>
+  </body>
+</html>
