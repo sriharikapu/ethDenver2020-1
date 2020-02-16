@@ -1,5 +1,11 @@
 # Primary Market
 
+Team: Cryptonomic
+
+Members:
+- Vishakh Null (vishakh on Discord)
+- Swapneel Chhaya
+
 A simple market for buying and selling shares in candidates during the primary election process. 
 
 There is no central order book or matching engine. Users buy or sell shares from a central counterparty.
